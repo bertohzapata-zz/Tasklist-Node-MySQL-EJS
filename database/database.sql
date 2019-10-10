@@ -1,0 +1,10 @@
+CREATE DATABASE IF NOT EXISTS tasklist;
+
+use tasklist;
+
+
+CREATE TABLE IF NOT EXISTS tasks(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    titulo VARCHAR(40) NOT NULL,
+    descripcion VARCHAR(255) NOT NULL
+);
