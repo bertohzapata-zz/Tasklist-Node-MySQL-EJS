@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const bodyParser = require('body-parser');
 const app = express();
 
 // Importar rutas
@@ -14,9 +15,13 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 
+// Midlewares
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+
 // Usando rutas
 app.use('/', homesRoutes);
 
-app.listen(3000, ()=> {
-    console.log('Servidor corriendo en le puerto 3000');
+app.listen(3001, ()=> {
+    console.log('Servidor corriendo en le puerto 3001');
 });

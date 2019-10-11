@@ -6,7 +6,6 @@ const pool = require('../database/connection');
 router.get('/', (request, response)=>{
     /* response.send('Hola mundo con nodemon'); */
     /* response.render('home'); */
-
     pool.query('SELECT * FROM tasks', (error, tasks, fields) => {
         if (error) throw error;
         console.log(tasks);

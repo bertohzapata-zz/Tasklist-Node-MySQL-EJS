@@ -6,6 +6,8 @@
 
 <body>
     <div class="container">
+
+        <!-- <pre> <%= tareas[0].id %> </pre> -->
         <div class="row">
 
             <div class="col-md-5">
@@ -33,7 +35,15 @@
                         <th>Descripción</th>
                         <th>Estatus</th>
                     </thead>
-                    <tbody></tbody>
+                    <tbody>
+                        <% for(var i = 0; i < tareas.length; i++){ %>
+
+                            <td> <%= tareas[i].id %> </td>
+                            <td> <%= tareas[i].titulo %> </td>
+                            <td> <%= tareas[i].descripcion %> </td>
+
+                        <% }%>
+                    </tbody>
                 </table>
             </div>
 
