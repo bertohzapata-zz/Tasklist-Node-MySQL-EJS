@@ -6,5 +6,6 @@ use tasklist;
 CREATE TABLE IF NOT EXISTS tasks(
     id INT PRIMARY KEY AUTO_INCREMENT,
     titulo VARCHAR(40) NOT NULL,
-    descripcion VARCHAR(255) NOT NULL
+    descripcion VARCHAR(255) NOT NULL,
+    estatus ENUM('ACTIVO', 'INACTIVO') DEFAULT 'ACTIVO' NOT NULL
 );
